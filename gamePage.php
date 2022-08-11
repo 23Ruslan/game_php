@@ -128,10 +128,6 @@
 													url: "getLevel.php",
 													data: { whoIsWinner: winner }
 												})
-/* 												.done(function( msg ) {
-													// $('#lvl').html( msg );
-													alert( msg ); // just for testing
-												}); */
 												if (confirm("Player " + winner + " won, do you want to try again?")){
 													window.location.reload(true); 
 												};
@@ -171,7 +167,7 @@
 		TicTacToe MinMax implementation	
 	</div>
 
-    <span id="lvl"></span>
+    <span id="lvl"></span> - is your level
 
 	<div id="restart">
 		Restart Game 
