@@ -2,15 +2,8 @@ let game = {};
 $(document).ready(function() {
 
     function initGame() {
-        game.gameBoard = [
-            ['', '', ''],
-            ['', '', ''],
-            ['', '', '']
-        ];
-        game.players = {
-            1: "O",
-            2: "X"
-        };
+        game.gameBoard = [ ['', '', ''], ['', '', ''], ['', '', ''] ];
+        game.players = { 1: "O", 2: "X"};
         game.isClick = 0;
         game.toggleBoardClick = function() {
             if (this.isClick == 0) {
@@ -68,7 +61,7 @@ $(document).ready(function() {
                     game.setPosition(position1, position2, game.players[1], $This);
                     $.ajax({
                         type: "POST",
-                        url: "server/game/Runner.php",
+                        url: "server/game/gameRunner.php",
                         data: {
                             position1: position1,
                             position2: position2,
@@ -83,7 +76,7 @@ $(document).ready(function() {
 
                             if (jobj.errorMessage) {
                                 switch (jobj.errorMessage[0]) {
-                                    case 400:
+                                    case 1000:
                                         alert("There is no winner. Draw!");
                                         break;
                                     default:
@@ -108,18 +101,14 @@ $(document).ready(function() {
                 };
             });
         };
-
         game.disableBoardClick = function(text) {
             $('td').unbind('click').click(function() {
                 alert(text);
             });
         };
     };
-
     initGame();
-
     game.enableBoardClick();
-
     $("#restart").mousedown(function() {
         $(this).addClass('clicked');
     }).mouseup(function() {

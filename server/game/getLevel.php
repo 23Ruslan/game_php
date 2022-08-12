@@ -23,7 +23,6 @@
         $resultSeclect->bind_param('is', $lvl, $_SESSION['login']);
         $resultSeclect->execute();
     }
-
     session_start();
     $mysqli = new mysqli('localhost','root','','shopee');
     if ( isset($_POST['name']) && isset($_POST['login']) ) {
@@ -33,7 +32,6 @@
         else
             insertFirstLevel($mysqli);
     }
-
     if (isset($_POST['whoIsWinner'])) 
     {
         $lvl = getLevel($mysqli);

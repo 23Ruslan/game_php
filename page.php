@@ -1,4 +1,4 @@
-<?php require_once 'layout' . DIRECTORY_SEPARATOR . 'header.php'; // instead of duplication header code ?>
+<?php include_once 'layout' . DIRECTORY_SEPARATOR . 'header.php'; // instead of duplication header code ?>
 
     <head>
 
@@ -8,7 +8,5 @@
 
 <body>
 
-    <h1> Page 1 of the test website </h1>
-
-<?php require_once 'layout' . DIRECTORY_SEPARATOR . 'footer.php'; // instead of duplication footer code
-require_once 'server' . DIRECTORY_SEPARATOR . 'game' . DIRECTORY_SEPARATOR . 'gamePage.html'; // instead of duplication footer code
+<?php include_once 'layout' . DIRECTORY_SEPARATOR . 'footer.php'; // instead of duplication footer code
+include_once 'server' . DIRECTORY_SEPARATOR . 'game' . DIRECTORY_SEPARATOR . 'gamePage.html'; // instead of duplication footer code

@@ -1,7 +1,7 @@
 <?php
 
 session_start(); // create PHPSESSID cookies on the client side
-require_once "crudOOP.php";
+include_once "crudOOP.php";
 $myDb = new Db("php://input");
 $data = $myDb->read();
 

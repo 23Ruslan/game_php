@@ -2,7 +2,7 @@
    session_start();
    // revoking access to php db config files (login.php/registration.php) by checking if the browser was on index.php :
    $_SESSION["step1"] = "-g32gpm32g-?edm`~,pfw"; 
-   require_once 'layout' . DIRECTORY_SEPARATOR . 'header.php'; // instead of duplication header code ?>
+   include_once 'layout' . DIRECTORY_SEPARATOR . 'header.php'; // instead of duplication header code ?>
 <head>
    <title>Main Page</title>
 </head>
@@ -16,11 +16,11 @@
                <table id="table100">
                   <tr>
                      <td id="td10" style="text-align: rigth; font-size: smaller;">
-                        login,<br>
-                        password,<br>
-                        confirm password,<br>
-                        email,<br>
-                        name,<br>
+                        login<br>
+                        password<br>
+                        confirm password<br>
+                        email<br>
+                        name<br>
                      </td>
                      <td id="td50r">
                         <input type="text" required placeholder="Enter your login" id="login" form="regform" minlength="6" maxlength="200" autofocus="autofocus"><br>

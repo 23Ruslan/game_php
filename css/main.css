@@ -1,21 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&display=swap");
+
+* {
+  font-family: "Edu SA Beginner", cursive;
+}
+
 body {
   margin: 0;
-  animation: anime infinite 2s linear;
+  animation: anime infinite 8s linear;
 }
 
 @keyframes anime {
   0% {
-    background: #69b7eb;
+    background: #345164;
   }
   33% {
-    background: #b3dbd3;
+    background: #24625f;
   }
   67% {
-    background: #f4d6db;
+    background: #204428;
   }
   100% {
-    background: #69b7eb;
+    background: #345164;
   }
 }
 
@@ -43,13 +48,6 @@ body {
   font-size: small;
 }
 
-#hello,
-a {
-  font-size: x-large;
-  margin: 0.2em;
-  text-align: center;
-}
-
 #loginMessage,
 #emailMessage,
 #loginMessage1,
@@ -63,9 +61,14 @@ a {
 
 h5,
 #hello,
-#unauthorized {
-  color: rgb(25, 0, 248);
+#unauthorized,
+a {
+  font-size: xx-large;
+  margin: 0.2em;
+  color: rgb(131, 241, 119);
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 td,
@@ -84,7 +87,7 @@ td span {
 button {
   margin: auto;
   display: block;
-  background: white;
+  background: rgb(0, 255, 225);
   padding: 1em 3em;
   box-shadow: 0 0 0 10px rgba(rgb(183, 255, 0), 0.5),
     0 0 0 20px rgba(rgb(65, 219, 137), 0.5);
@@ -111,22 +114,22 @@ button {
 .col1,
 .col2,
 .col3 {
-  animation: anime1 infinite 2s linear;
+  animation: anime1 infinite 9s linear;
   display: flexbox;
 }
 
 @keyframes anime1 {
   0% {
-    background: #9cf3e9;
+    background: #e0cf35;
   }
   33% {
-    background: #85d9da;
+    background: #2c41cb;
   }
   67% {
-    background: #b1e9f5;
+    background: #9a30aa;
   }
   100% {
-    background: #82d3f6;
+    background: #e0cf35;
   }
 }
 
@@ -145,10 +148,6 @@ button {
 .col2 select {
   margin: 1em;
   padding: 1em;
-}
-
-* {
-  font-family: "Edu SA Beginner", cursive;
 }
 
 select,

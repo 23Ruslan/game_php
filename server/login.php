@@ -2,7 +2,7 @@
 
 session_start(); // create PHPSESSID cookies on the client side
 //echo date('h:i:s')."\n";sleep(5);echo date('h:i:s')."\n"; // testing that the button is blocked for the duration of the server response
-require_once "crudOOP.php";
+include_once "crudOOP.php";
 (new Safe())->accessControl(); // at first we check if it is safe to open access to this db config php file
 
 $myDb = new Db("php://input");

@@ -1,24 +1,26 @@
     <b><i>
 
-        <span id="hello"> 
+        <div id="hello"> 
 
             Hello! 
 
-            <span id="username"></span> 
+            <span id="username"></span> player
 
-            <br><button id="logout">logout</button> 
+            <br><br><button id="logout">logout</button> 
 
-        </span>
+        </div>
 
     </i></b>
 
-    <br><a>it is web site for testing authorization and session </a>
+    <div id="hello">
 
     <br><a href="index.php">Go to main page (Sign Up / Log In for unauthorized users there) </a> 
 
     <br><a href="page.php">Go to Game Page</a> 
 
-    <br><span id="unauthorized">Welcome, unauthorized user!</span> 
+    <br><span id="unauthorized">Welcome, unauthorized user!</span>
+
+</div>
 
     <script src="js/script.js"></script> 
 
