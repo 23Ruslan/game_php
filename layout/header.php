@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="css/main.css" type="text/css"/>
 
-    <link rel="shortcut icon" href="https://reg.link2site.site/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="https://game.link2site.site/favicon.ico" type="image/x-icon">
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
