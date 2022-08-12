@@ -24,19 +24,19 @@ class MinMax implements IMinMax {
 
 		$choose = self::DEFAULT_MIN; 
 
-		foreach($gameBoard as $pos1=>$columns){
-			foreach($columns as $pos2=>$player){ 
+		foreach($gameBoard as $position1=>$columns){
+			foreach($columns as $position2=>$player){ 
 				if (false !== $player){
 					continue; 
 				}
 				$gameClone = clone $this->_game; 
-				$gameClone->setPosition(array($pos1,$pos2));
+				$gameClone->setPosition(array($position1,$position2));
 				$gameClone->setPlayer();
 				$value = $this->minMove($gameClone,1,$choose,self::DEFAULT_MAX); 
-				$gameClone->setPosition(array($pos1,$pos2),true);
+				$gameClone->setPosition(array($position1,$position2),true);
 				if ($value > $choose){
 					$choose = $value;
-					$move = array($pos1,$pos2); 
+					$move = array($position1,$position2); 
 				} 
 				$gameClone->setPlayer();
 			
@@ -86,16 +86,16 @@ class MinMax implements IMinMax {
 		}
 		
 		$gameBoard = $gameClone->getGameBoard();
-		foreach($gameBoard as $pos1=>$colmuns){
-			foreach($colmuns as $pos2=>$player){ 
+		foreach($gameBoard as $position1=>$colmuns){
+			foreach($colmuns as $position2=>$player){ 
 				if(false !== $player){ 
 					continue ; 
 				}
-				$gameClone->setPosition(array($pos1,$pos2));
+				$gameClone->setPosition(array($position1,$position2));
 				$gameClone->setPlayer();
 				$value = $this->minMove($gameClone,++$depth,$alpha,$beta); 
-				//return board so we won't have pos1,pos2 taken
-				$gameClone->setPosition(array($pos1,$pos2),true);
+				//return board so we won't have position1,position2 taken
+				$gameClone->setPosition(array($position1,$position2),true);
 				$gameClone->setPlayer();
 				if ($value > $alpha){ 
 					$alpha = $value; 
@@ -118,16 +118,16 @@ class MinMax implements IMinMax {
 		 
 		$gameBoard = $gameClone->getGameBoard();
 		
-		foreach($gameBoard as $pos1=>$colmuns){
-			foreach($colmuns as $pos2=>$player){ 
+		foreach($gameBoard as $position1=>$colmuns){
+			foreach($colmuns as $position2=>$player){ 
 				if(false !== $player){
 					continue ; 	
 				}
-				$gameClone->setPosition(array($pos1,$pos2));
+				$gameClone->setPosition(array($position1,$position2));
 				$gameClone->setPlayer();
 				$value = $this->maxMove($gameClone,++$depth,$alpha,$beta); 
 
-				$gameClone->setPosition(array($pos1,$pos2),true);
+				$gameClone->setPosition(array($position1,$position2),true);
 				$gameClone->setPlayer();
 				if ($value < $beta){ 
 					$beta = $value; 

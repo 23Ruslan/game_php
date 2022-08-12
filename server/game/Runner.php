@@ -3,7 +3,7 @@ require_once("TicTacToe.php");
 
 $config = array(
 				'player'	=>	Game::PLAYER,
-				'move'		=>	array($_POST['pos1'],$_POST['pos2']),
+				'move'		=>	array($_POST['position1'],$_POST['position2']),
 				); 
 session_start();
 if ( !isset($_SESSION['$victoryController']) ) 

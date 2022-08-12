@@ -4,7 +4,7 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    <link rel="stylesheet" href="main.css" type="text/css"/>
+    <link rel="stylesheet" href="css/main.css" type="text/css"/>
 
     <link rel="shortcut icon" href="https://reg.link2site.site/favicon.ico" type="image/x-icon">
 

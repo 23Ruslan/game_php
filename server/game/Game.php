@@ -1,5 +1,4 @@
 <?php
-
 class GameException extends Exception {//Game Exception to handle our own exceptions 
 } 
 interface IGame {
@@ -14,7 +13,7 @@ abstract class Game implements IGame {
 	const COMPUTER 	= 2;
 	const DRAW			= 400;
 	const GOING_ON 		= 401;
-	const ALLOWD_MOVE 	= 2;
+	const ALLOWED_MOVE 	= 2;
 	public function __construct(array $config){
 		// continue or starting new game?
 		if (isset($config['gameBoard'])){
@@ -41,12 +40,12 @@ abstract class Game implements IGame {
 	}
 	
 	protected static function isBoardFull(array $gameBoard){
-		foreach($gameBoard as $pos1=>$columns){
-			foreach($columns as $pos2=>$player){
+		foreach($gameBoard as $position1=>$columns){
+			foreach($columns as $position2=>$player){
 				if (false !== $player){
 					continue ; 	
 				}
-				$blankPositions[] = array($pos1,$pos2);
+				$blankPositions[] = array($position1,$position2);
 			}
 		}
 	
@@ -58,7 +57,7 @@ abstract class Game implements IGame {
 			return $this->_gameBoard[$move[0]][$move[1]] = ($isEmpty)? false:$this->_currentPlayer;
 		}
 		
-		throw new GameException("Unallowd move ({$move[0]},{$move[1]}), code need to be fixed");
+		throw new GameException("Unallowed move ({$move[0]},{$move[1]}), code need to be fixed");
 	}
 		
 	protected function clearBoard(){
@@ -73,9 +72,9 @@ abstract class Game implements IGame {
 	}
 
 	protected function setGameBoard($gameBoard){
-		foreach($gameBoard as $pos1=>$columns){
-			foreach($columns as $pos2=>$player){
-				$this->_gameBoard[$pos1][$pos2] = (!$player)? false:$player;
+		foreach($gameBoard as $position1=>$columns){
+			foreach($columns as $position2=>$player){
+				$this->_gameBoard[$position1][$position2] = (!$player)? false:$player;
 			}
 		}
 	}
@@ -84,19 +83,19 @@ abstract class Game implements IGame {
 		return $this->_gameBoard;
 	}
 
-	protected static function isAllowdMove(array $move){
-		if (!empty($move) && self::ALLOWD_MOVE == count($move)){
+	protected static function isAllowedMove(array $move){
+		if (!empty($move) && self::ALLOWED_MOVE == count($move)){
 			return true;
 		}
 		return false;
 	}
 	
 	private static function isAlreadyTaken(array $move,array $gameBoard){
-		if (self::isAllowdMove($move)){
+		if (self::isAllowedMove($move)){
 			return $gameBoard[$move[0]][$move[1]];
 		}
 	
-		throw new GameException('Unallowd move taken');
+		throw new GameException('Unallowed move taken');
 	}
 
 	public function __toString(){ // to return json answers for ajax support

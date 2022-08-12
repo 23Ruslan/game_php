@@ -27,14 +27,14 @@ let checksession = async function(naccessStatus = '') { // accessStatus is openi
 	if (result['message'] !== "no_session") {
 		$.ajax({
 			method: "POST",
-			url: "getLevel.php",
-			data: { login: result['login'], name: result['message'] }
+			url: "server/game/getLevel.php",
+			data: { login: 'takeFromSession', name: 'takeFromSession' }
 		})
 		.done(function( msg ) {
 			$('#lvl').html( msg );
 			// alert( msg ); // just for testing
 		});
-	} else $('#lvl').html('Log in to see your level');
+	} else $('#lvl').html('log in to see your level...');
 	
 	id('username').innerHTML = result['message'];
 	id('hello').hidden = (result['message'] === "no_session");

@@ -16,11 +16,11 @@
 
     <br><a href="index.php">Go to main page (Sign Up / Log In for unauthorized users there) </a> 
 
-    <br><a href="page1.php">Go to Game Page</a> 
+    <br><a href="page.php">Go to Game Page</a> 
 
     <br><span id="unauthorized">Welcome, unauthorized user!</span> 
 
-    <script src="script.js"></script> 
+    <script src="js/script.js"></script> 
 
 </body> 
 </html>

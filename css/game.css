@@ -1,0 +1,44 @@
+.center{ text-align:center; margin-bottom: 8px; font-size: 25px;}
+	body { 		
+		background: #CCCCBF
+	}
+	table { 
+		border: 5px solid #DDDDCC; 
+		width: 500px; 
+		height: 500px; 
+		text-align:center
+	}  
+	tr,td { 
+		width: 100px;
+		height: 50px;
+		border: 8px solid #DFDFDF; 
+	}
+	td{ 
+		color: #EEEFFF;
+		font-size:28px; 
+
+		margin: 0; 
+		padding:0;
+		font-weight: bold;
+	}
+	
+	div#restart { 
+		width:300px; 
+		margin: 0 auto; 
+		text-align: center; 
+		font-size: 20px; 
+		border-right: 1px solid gray; 
+		border-bottom: 1px solid gray; 
+		border-top: 1px solid #EFEFEF;
+		border-left:  1px solid #EFEFEF;	
+		margin-bottom: 5px;
+		cursor: hand;
+		cursor: pointer;
+	} 
+	
+	div#restart.clicked { 
+		border-right: 1px solid #EFEFEF; 
+		border-bottom: 1px solid #EFEFEF; 
+		border-top: 1px solid gray;
+		border-left:  1px solid  gray;	
+	}
